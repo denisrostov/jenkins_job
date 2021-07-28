@@ -6,13 +6,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
-public class FormTestsPageObjectWithFacker {
+public class FormTestsPageObjectWithFacker extends testBase {
 
-    @BeforeAll
-    static void setup() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.startMaximized = true;
-    }
+
 
     RegistrationPage registrationPage = new RegistrationPage();
     Faker faker = new Faker();
