@@ -77,7 +77,7 @@ public class RegistrationPage {
     }
 
     public void openPage() {
-        open("https://demoqa.com/automation-practice-form");
+        open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text(FORM_TITLE));
     }
 
