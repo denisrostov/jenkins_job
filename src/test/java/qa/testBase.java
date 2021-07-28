@@ -10,7 +10,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class testBase {
     @BeforeAll
     static void setup() {
-//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+           SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
