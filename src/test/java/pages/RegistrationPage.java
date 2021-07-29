@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationPage {
-    CalendarComponent calendarComponet = new CalendarComponent();
+    CalendarComponent calendarComponent = new CalendarComponent();
     private final static String FORM_TITLE = "Student Registration Form";
     private final static String RESULTS_TITLE = "Thanks for submitting the form";
 
@@ -76,7 +76,7 @@ public class RegistrationPage {
 
 
     public RegistrationPage setDate(String day, String month, String year) {
-        calendarComponet.setDate(day, month, year);
+        calendarComponent.setDate(day, month, year);
         return this;
     }
 
