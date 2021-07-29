@@ -1,7 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import componets.CalendarComponet;
+import componets.CalendarComponent;
 
 import java.io.File;
 
@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationPage {
-    CalendarComponet calendarComponet = new CalendarComponet();
+    CalendarComponent calendarComponet = new CalendarComponent();
     private final static String FORM_TITLE = "Student Registration Form";
     private final static String RESULTS_TITLE = "Thanks for submitting the form";
 
@@ -47,26 +47,30 @@ public class RegistrationPage {
         $("#hobbiesWrapper").$(byText(hobbies)).click();
 
     }
+
     public void typeMobile(String mobile) {
         $("#userNumber").setValue(mobile);
 
     }
-        public void typeAddress(String currentAddress) {
-            $("#currentAddress").setValue(currentAddress);
+
+    public void typeAddress(String currentAddress) {
+        $("#currentAddress").setValue(currentAddress);
 
     }
-    public RegistrationPage typeEmail(String email){
+
+    public RegistrationPage typeEmail(String email) {
         $("#userEmail").setValue(email);
         return this;
     }
 
-     public void setStateCity(String state,String city) {
-         $("#react-select-3-input").setValue(state).pressEnter();
-         $("#react-select-4-input").setValue(city).pressEnter();
+    public void setStateCity(String state, String city) {
+        $("#react-select-3-input").setValue(state).pressEnter();
+        $("#react-select-4-input").setValue(city).pressEnter();
 
     }
-         public void submit() {
-             $("#submit").scrollTo().click();
+
+    public void submit() {
+        $("#submit").scrollTo().click();
 
     }
 

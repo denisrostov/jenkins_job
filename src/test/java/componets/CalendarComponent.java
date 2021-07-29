@@ -2,7 +2,7 @@ package componets;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class CalendarComponet {
+public class CalendarComponent {
     public void setDate (String day,String month, String year){
         $("#submit").scrollTo();
         $(("#dateOfBirthInput")).click();
