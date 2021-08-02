@@ -7,6 +7,8 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import static config.Credentials.credentials;
+import static java.lang.String.format;
 
 public class testBase {
     @BeforeAll
@@ -20,8 +22,13 @@ public class testBase {
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.startMaximized = true;
-//       Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
-       Configuration.remote = System.getProperty("url");
+        Configuration.remote = format(
+                "https://%s:%s@%s/wd/hub/",
+                credentials.login(),
+                credentials.password(),
+                System.getProperty("URL")
+        );
+
     }
 
     @AfterEach
