@@ -42,3 +42,4 @@ public class testBase {
 }
 
 
+//java -DprojectName=local -Denv=test -DreportLink=ya.ru -Dconfig.file=./telegram.json -jar -jar allure-notifications-3.1.1.jar
