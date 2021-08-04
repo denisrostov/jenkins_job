@@ -22,12 +22,13 @@ public class testBase {
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.startMaximized = true;
-        Configuration.remote = format(
-                "https://%s:%s@%s/wd/hub/",
-                credentials.login(),
-                credentials.password(),
-                System.getProperty("URL")
-        );
+        Configuration.remote = "http://localhost:4444/wd/hub";
+//        Configuration.remote = format(
+//                "https://%s:%s@%s/wd/hub/",
+//                credentials.login(),
+//                credentials.password(),
+//                System.getProperty("URL")
+//        );
 
     }
 
@@ -42,4 +43,4 @@ public class testBase {
 }
 
 
-//java -DprojectName=local -Denv=test -DreportLink=ya.ru -Dconfig.file=./telegram.json -jar -jar allure-notifications-3.1.1.jar
+//java -DprojectName=local -Denv=test -DreportLink="ya.ru" -Dconfig.file=./telegram.json -jar -jar allure-notifications-3.1.1.jar
