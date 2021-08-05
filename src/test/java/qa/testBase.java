@@ -22,7 +22,8 @@ public class testBase {
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.startMaximized = true;
-        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
+//        Configuration.remote = "http://192.168.31.23:4444/wd/hub";
 //        Configuration.remote = format(
 //                "https://%s:%s@%s/wd/hub/",
 //                credentials.login(),
