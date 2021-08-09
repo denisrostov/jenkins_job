@@ -42,8 +42,8 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Test) {
     systemProperties(System.getProperties())
-   systemProperty("URL", System.getProperty("URL", "selenoid.autotests.cloud"))
-    println "[build.gradle]: " + System.getProperty("URL")
+//   systemProperty("URL", System.getProperty("URL", "selenoid.autotests.cloud"))
+//    println "[build.gradle]: " + System.getProperty("URL")
     useJUnitPlatform()
 
     testLogging {
